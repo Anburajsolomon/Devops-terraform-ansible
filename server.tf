@@ -10,18 +10,18 @@ terraform {
 provider "aws" {
 region = "us-east-2"
 }
-resource "aws_instance" "myawsserver" {
+resource "aws_instance" "Anbu-Aws-server" {
   ami = "ami-0e1a3a59369c81682"
   instance_type = "t2.micro"
   key_name = "anburaj-import"
 
   tags = {
-    Name = "raman-DevOps-batch-server"
+    Name = "Anburaj-DevOps-batch-server"
     env = "Production"
-    owner = "Raman"
+    owner = "Anburaj"
   }
   provisioner "local-exec" {
-    command = "echo The servers IP address is ${self.public_ip} && echo ${self.public_ip} > /tmp/inv"
+    command = "echo The servers IP address is Anbu aws -jekins created file ${self.public_ip} && echo ${self.public_ip} > /tmp/inv"
   }
 }
 
